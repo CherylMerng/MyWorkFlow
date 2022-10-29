@@ -29,8 +29,9 @@ jobs:
       run: echo "MY_SECRET is ${{ secrets.MY_SECRET }}"
     - name: List my current directory before checkout
       #run: ls -l #only show the file
-      run: ls -la
+      uses: ls -la  #uses = run action #run = run command
     - name: Checkout the current repo
       run: actions/checkout@v3
     - name: List my current directory after checkout
-      run: ls -la
+      run: ls -la   
+
