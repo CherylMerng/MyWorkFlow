@@ -26,4 +26,4 @@ jobs:
     #- name: failing on purpose  #failing the workflow
       #run: fail()  
     - name: Echo my secret  #if incorrect, no error but get nothing
-      run: echo "MY_SECRET" is ${{ secrets.MY_SECRET }}""
+      run: echo "MY_SECRET" is ${{ secrets.MY_SECRET }}"
