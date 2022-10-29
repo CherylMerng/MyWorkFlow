@@ -13,7 +13,7 @@ jobs:
   my-first-workflow:  
 
     # OS that this job will be running on
-    runs-on: ubuntu's latest
+    runs-on: ubuntu-latest
 
     # list of steps to perform task
     steps:
