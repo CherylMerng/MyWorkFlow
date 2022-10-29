@@ -23,5 +23,7 @@ jobs:
       run: echo "head_ref - ${{ github.head_ref }}, owner - ${{ github.repository_owner }}"
     - name: List runner name
       run: echo "runner os - $ {{ runner.os }}"
-    - name: failing on purpose
-      run: fail()  
+    #- name: failing on purpose  #failing the workflow
+      #run: fail()  
+    - name: Echo my secret  #if incorrect, no error but get nothing
+      run: echo "MY_SECRET" is ${{ secrets.MY_SECRET }}""
