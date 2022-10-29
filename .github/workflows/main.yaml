@@ -1,0 +1,21 @@
+name: My First Workflow #name of this workflow
+
+# trigger - This workflow will run whenever the repo receives a push
+# on: [push] OR
+on: 
+- push
+# - pull
+
+# Jobs to perform in the workflow
+jobs:
+
+  #job's id/ name
+  my-first-workflow:  
+
+    # OS that this job will be running on
+    runs-on: ubuntu's latest
+
+    # list of steps to perform task
+    steps:
+    - name: echo the date
+      run: echo "The current time and date in GitHub is $(date)"
