@@ -27,11 +27,21 @@ jobs:
       #run: fail()  
     - name: Echo my secret  #if incorrect, no error but get nothing
       run: echo "MY_SECRET is ${{ secrets.MY_SECRET }}"
+      
     - name: List my current directory before checkout
       #run: ls -l #only show the file
-      uses: ls -la  #uses = run action #run = run command
+      run: ls -la  #uses = run action #run = run command
+   
+    - name: branch name
+      run: echo "branch name - ${{ github.ref }}"
+
     - name: Checkout the current repo
-      run: actions/checkout@v3
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref }}
+
     - name: List my current directory after checkout
       run: ls -la   
+
+    - name: branch name
 
