@@ -26,4 +26,10 @@ jobs:
     #- name: failing on purpose  #failing the workflow
       #run: fail()  
     - name: Echo my secret  #if incorrect, no error but get nothing
-      run: echo "MY_SECRET" is ${{ secrets.MY_SECRET }}"
+      run: echo "MY_SECRET is ${{ secrets.MY_SECRET }}"
+    - name: List mmy current directory
+      run: ls -l
+    - name: Checkout the current repo
+      run: actions/checkout@v3
+    - name: List my current directory after checkout
+      run: ls -l
